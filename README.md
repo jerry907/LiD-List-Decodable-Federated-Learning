@@ -35,8 +35,8 @@ The [accompanying paper](https://arxiv.org/abs/2408.04963).
 
 Installation                                                                                                                   
 -----------------
-This code is written in Python 3.8 and has been tested on PyTorch 1.4+.
-A conda environment file is provided in `lidfl.yml` with all dependencies except PyTorch. 
+This code is written in 'Python 3.8.16' and 'pytorch 2.0.1 py3.8_cuda11.7_cudnn8.5.0_0'.
+A conda environment file is provided in `lidfl.yml`. 
 It can be installed by using [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
 as follows
 
@@ -53,11 +53,11 @@ Due to the large size of dataset, we ddi not upload dataset here, and the comple
 https://drive.google.com/file/d/1_FopTqq_ZgVO7OkNBtCiw9SyTyGvU5m6/view?usp=drive_link.
 1. ### FEMNIST 
 
-  * **Overview:** Character Recognition Dataset
+  * **Overview:** Character Recognition Dataset (https://github.com/TalwalkarLab/leaf)
   * **Original dataset:** 62 classes (10 digits, 26 lowercase, 26 uppercase), 3500 total users.(leaf.cmu.edu)
   * **Preprocess:** We sample 5% of the images in the original dataset to construct our datasets. For the homogeneous setting, each client sample images from a uniform distribution over 62 classes.   We generate heterogeneous datasets for clients using categorical distributions qmdrawn from a Dirichlet distribution q ∼ Dir(αp), where p is a prior class distribution over 62 classes (Hsu, Qi, and Brown 2019). Each client sample from a categorical distribution characterized by an independent q . In our experiment for the heterogeneous setting, we let α = 0.1, which is described as the extreme heterogeneity setting in (Allouah et al. 2023a).
   * **Task:** Image Classification
-  * **Directory:** ```data/femnist``` 
+  * **Directory:** ```data/prepare_iid_femnist_data``` 
 
 2. ### CIFAR10
 
@@ -65,7 +65,7 @@ https://drive.google.com/file/d/1_FopTqq_ZgVO7OkNBtCiw9SyTyGvU5m6/view?usp=drive
   * **Original dataset:** 60000 32x32 colour images in 10 classes, with 6000 images per class.(https://www.cs.toronto.edu/~kriz/cifar.html)
   * **Preprocess:** We use a small dataset of 35 clients uniformly sampled from the CIFAR-10 dataset, and each client contains 300 train samples and 60 test samples.
   * **Task:** Image Classification
-  * **Directory:** ```data/cifar10``` 
+  * **Directory:** ```data/prepare_iid_cifar_data``` 
 
 
 Reproducing Experiments in the Paper
@@ -74,7 +74,11 @@ Reproducing Experiments in the Paper
 As the data has been set up, the scripts provided in the folder ```scripts/``` can be used 
 to reproduce the experiments in the paper.
 
-Change directory to ```main_fl.py``` and run the scripts as 
+Change directory to ```main_fl.py``` and run the LiD-FL scripts as 
 ```
-./scripts/femnist_cnn/run.sh  
+./scripts/iid_lr.sh  
 ```
+run the baseline (Non LiD-FL algorithms such as GM, FedAvg, etc.) scripts as
+'''
+./scripts/sigmdl.sh  
+'''
