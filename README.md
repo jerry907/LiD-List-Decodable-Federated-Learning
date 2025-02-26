@@ -1,6 +1,6 @@
 # LiD-FL: Towards List-Decodable Federated Learning
 
-This repository provides source code to reproduce the experimental results in the paper "LiD: List-Decodable Federated Learning". This project is based on a fork of the [Leaf](leaf.cmu.edu) benchmark suite and [pFedBreD_public](https://github.com/BDeMo/pFedBreD_public).
+This repository provides source code to reproduce the experimental results in the paper "LiD-FL: Towards List-Decodable Federated Learning". This project is based on a fork of the [Leaf](leaf.cmu.edu) benchmark suite and [pFedBreD_public](https://github.com/BDeMo/pFedBreD_public).
 
 If you use this code, please cite the paper using the bibtex reference below
 
