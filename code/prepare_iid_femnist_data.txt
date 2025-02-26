@@ -1,4 +1,0 @@
-Command for FEMNIST dataset generation (based on LEAF: https://github.com/TalwalkarLab/leaf):
-./preprocess.sh -s iid --sf 0.05 -k 0 -t sample
-
-
