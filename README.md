@@ -78,6 +78,6 @@ Change directory to ```main_fl.py``` and run the LiD-FL scripts as
 ./scripts/iid_lr.sh  
 ```
 run the baseline (Non LiD-FL algorithms such as GM, FedAvg, etc.) scripts as
-'''
+```
 ./scripts/sigmdl.sh  
-'''
+```
