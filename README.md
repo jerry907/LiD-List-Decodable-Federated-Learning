@@ -49,8 +49,7 @@ conda env create -f lidfl.yml
 
 Dataset
 -----------
-Due to the large size of dataset, we ddi not upload dataset here, and the complete dataset is available at 
-https://drive.google.com/file/d/1_FopTqq_ZgVO7OkNBtCiw9SyTyGvU5m6/view?usp=drive_link.
+Due to the large size of dataset, we only provide scripts for dataset generation.
 1. ### FEMNIST 
 
   * **Overview:** Character Recognition Dataset (https://github.com/TalwalkarLab/leaf)
